@@ -2,6 +2,7 @@
 import express from 'express'
 import logger from 'morgan'
 import cors from 'cors'
+import './config/database.js'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
