@@ -7,6 +7,7 @@ import './config/database.js'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
+import { router as puppiesRouter } from './routes/puppies.js'
 
 // create the express app
 const app = express()
@@ -18,6 +19,7 @@ app.use(express.json())
 
 // mount imported routes
 app.use('/', indexRouter)
+app.use('/api/puppies', puppiesRouter)
 
 // handle 404 errors
 app.use(function (req, res, next) {
